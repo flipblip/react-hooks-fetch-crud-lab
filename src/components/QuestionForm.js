@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 
-function QuestionForm(props) {
-  const [formData, setFormData] = useState({
-    prompt: "",
-    answer1: "",
-    answer2: "",
-    answer3: "",
-    answer4: "",
-    correctIndex: 0,
-  });
+function QuestionForm({handleAddQuestion}) {
+  const defaultState = {prompt: "", answer1: "", answer2: "", answer3: "", answer4: "", correctIndex: 0}
+  const [formData, setFormData] = useState({defaultState});
 
   function handleChange(event) {
     setFormData({
